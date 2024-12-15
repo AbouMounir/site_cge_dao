@@ -1,7 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import styles from './lib/styles/bg.module.css'
+import text_styles from './lib/styles/text.module.css'
+import Logo from "./lib/logo"
+import SocialsMedias from "./lib/socialMedia"
 
-const geistSans = Geist({
+{/*const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
@@ -9,7 +13,9 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-});
+});*/}
+{/*className={`${geistSans.variable} ${geistMono.variable} antialiased`}*/}
+
 
 export const metadata = {
   title: "Create Next App",
@@ -20,9 +26,45 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        
       >
+        <header>
+          <div className="h-16 pl-10 bg-blue-900">
+            <SocialsMedias color="white" colorStroke="white" rx="5.7622"/>
+          </div>
+          <div className="w-11/12 flex justify-between">
+              <Logo />
+              <svg className="h-16" width="24" height="23" viewBox="0 0 29 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 1.50134H29M0 21.5013H29M3.29545 11.5013H29" stroke="#434343" strokeWidth="2"/>
+              </svg>
+            </div>
+        </header>
         {children}
+        <footer className={`${styles.bg_footer}`}>
+          <div className="ml-6 w-2/3">
+            <Logo />
+            <p className={`${text_styles.body_text} mb-4`}>Découvrez un monde de possibilités avec CGE-DAO.</p>
+            <SocialsMedias color="black" colorStroke="black" rx="11.9085"/>
+            <div className="mt-8">
+              <h1 className="font-bold mb-2"> Pages </h1>
+              <ul className={`${text_styles.body_text} grid gap-2`}>
+                <li className="">Presentation</li>
+                <li className="">Services</li>
+                <li className="">Projets</li>
+                <li className="">Technologies et outils</li>
+              </ul>
+            </div>
+            <div className="mt-8 mb-3">
+              <h1 className="font-bold mb-2"> Contact </h1>
+              <ul className="">
+                <li className={`${text_styles.body_text} mb-1`}>+225 014 0729 371</li>
+                <li className={text_styles.body_text}>Plateau 13 Boulevard</li>
+                <li className={text_styles.body_text}>Batreau Roussel, 01 Bp</li>
+                <li className={text_styles.body_text}>1831 Abidjan 01</li>
+              </ul>
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );
