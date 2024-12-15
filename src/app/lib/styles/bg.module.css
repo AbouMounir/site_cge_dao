@@ -1,0 +1,22 @@
+/* src/components/bg.module.css */
+
+.bg_footer, .bg_expert {
+    background-color: #F3F9FD;
+}
+
+.bg_cabinet {
+  background-color: #808080;
+  opacity: 0.1;
+}
+
+.bg_directeur {
+  background-color: #191970;
+}
+.bg_actuality {
+  background-image: url('/bg_stats_img.png');
+}
+
+.bg_tools {
+  background-color: #F9F9FB;
+}
+
