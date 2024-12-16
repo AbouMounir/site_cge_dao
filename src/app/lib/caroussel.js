@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 import Card from "./card";
 import { servicesFoncier, servicesGeo, servicesTopo } from "./data";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
-import { ArrowRighIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import clsx from 'clsx';
 
@@ -59,7 +59,7 @@ export default function Caroussel() {
                     ))}
                 </div>
                 <div onClick={nextPole} className="flex items-center justify-center right-4  h-10 w-10 rounded-full border-2 border-blue-900">
-                    <ArrowRighIcon className="h-5 w-5" />
+                    <ArrowRightIcon className="h-5 w-5" />
                 </div>
             </div>
         </div>
