@@ -7,6 +7,7 @@ import ToolsCard from './lib/outilsCard';
 import ContactSection from './lib/contactSection';
 import styles from './lib/styles/bg.module.css'
 import text_styles from './lib/styles/text.module.css'
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -22,10 +23,12 @@ export default function Home() {
           <p className={`${text_styles.body_text}   text-muted-foreground mb-6`}>
             Votre partenaire de confiance pour des levés fonciers précis et des informations sur les propriétés. Nous apportons expertise et précision à chaque projet, vous aidant à prendre des décisions en toute confiance
           </p>
-          <button 
-            className="bg-orange-400 hover:bg-orange-600 text-white px-4 py-2 text-md rounded-lg">
-            Commencer
-          </button>
+          <Link href='/contact'>
+            <button 
+              className="bg-orange-400 hover:bg-orange-600 text-white px-4 py-2 text-md rounded-lg">
+              Commencer
+            </button>
+          </Link>
         </div>
       </section>
 
@@ -278,10 +281,12 @@ export default function Home() {
             titleStyle='mb-3 text-2xl'
             body="Vous cherchez un cabinet de géomètre-expert pour vous accompagner dans votre projet"
           />
-          <button 
-            className="bg-orange-500 ml-5 hover:bg-orange-600 text-white px-4 py-2 text-sm rounded-md">
-            Commencer
-          </button>
+          <Link href='/contact'>
+            <button 
+              className="bg-orange-400 ml-5 hover:bg-orange-600 text-white px-4 py-2 text-md rounded-lg">
+              Commencer
+            </button>
+          </Link>
           <Image
               src="/equipe_img.png"
               alt="Surveyor working on site"
