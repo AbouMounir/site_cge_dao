@@ -11,10 +11,10 @@ export default function ToolsCard({iconUrl, title, tools}) {
             alt="image of the card"
             className="bg-blue-900 rounded-lg p-2 mb-3"
          />}
-         <h1 className="text-xl text-black mb-1 font-bold md:text-5xl tracking-tight">
+         <h1 className="text-xl mb-1 font-bold md:text-xl lg:!text-2xl tracking-tight">
             {title}
          </h1>
-         <ul className={`${text_styles.body_text} list-disc px-6`}>
+         <ul className={`${text_styles.body_text} lg:!text-lg list-disc px-6`}>
             {tools.map((item,index) => (
                 <li key={index}>{item}</li>
             ))}

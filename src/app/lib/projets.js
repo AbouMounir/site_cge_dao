@@ -1,16 +1,15 @@
 'use client'
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { projets } from "./data";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import clsx from 'clsx';
 import text_styles from './styles/text.module.css'
 import Link from "next/link";
 
 
-export default function CarousselProjet() {
+export default function Projets() {
 
     const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -26,20 +25,25 @@ export default function CarousselProjet() {
     
     
     return (
-        <div className="">
-            <div key={projets[currentIndex].id} className="rounded-lg px-5 py-3">
-                <Image
-                    src={projets[currentIndex].url}
-                    alt="Illustration image"
-                    width={600}
-                    height={900}
-                    className="mb-5 rounded-xl object-cover w-full h-[300px]"
-                />
-                <h1 className="text-2xl my-3">
-                    {projets[currentIndex].title}
-                </h1>
-                <p className={`${text_styles.body_text}`}><span className="font-bold"> Détails : </span> {projets[currentIndex].details}</p>
-                <p className={`${text_styles.body_text} my-3`}><span className="font-bold"> Impacts : </span> {projets[currentIndex].impacts}</p>
+        <div className="w-full">
+            <div className="flex md:justify-center  md:gap-x-8 w-full overflow-hidden">
+                {projets.map((item) => (
+                    <div className="px-5 flex-shrink-0 w-full transition-transform duration-500 ease-in-out md:w-[45%]"  style={{ transform: `translateX(-${currentIndex * 100}%)` }} key={item.id}>
+                        <Image
+                            src={item.url}
+                            alt="Illustration image"
+                            width={600}
+                            height={900}
+                            className="mb-5 rounded-xl object-cover w-full h-[300px]"
+                        />
+                        <h1 className="text-xl font-bold my-3">
+                            {item.title}
+                        </h1>
+                        <p className={`${text_styles.body_text} md:!text-base lg:!text-lg`}><span className="font-bold"> Détails : </span> {item.details}</p>
+                        <p className={`${text_styles.body_text} my-3 md:!text-base lg:!text-lg`}><span className="font-bold"> Impacts : </span> {item.impacts}</p>
+                    </div>
+                ))
+            }
             </div>
             <div className="mx-5 flex justify-between">
                 <div onClick={prevPole} className="flex items-center justify-center left-4 h-10 w-10 rounded-full border-2 border-blue-900">

@@ -1,6 +1,6 @@
 export default function SocialsMedias({color, colorStroke, rx}) {
     return (
-        <ul className="flex h-full items-center gap-2">
+        <ul className="flex h-full items-center gap-2 md:h-auto">
               <li>
                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.35122" y="0.35122" width="23.8171" height="23.8171" rx={rx} stroke={colorStroke} strokeWidth="0.702439"/>
