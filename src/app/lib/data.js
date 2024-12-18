@@ -182,12 +182,12 @@ import { title } from "process"
     {
       id : 2,
       question: "Quels types de projets CGE-DAO réalise-t-il en Côte d'Ivoire ?",
-      response : "L a r e p o n s e",
+      response : "Nous intervenons sur divers projets : lotissement, aménagement, foncier, délimitation, dossier technique, copropriété,  routes, bâtiments, ponts, réhabilitation, etc. Notre expertise couvre tous les aspects du foncier, de la topographie et de la géomatique.",
     },
     {
       id : 3,
       question: "Comment puis-je obtenir un devis pour mon projet ?",
-      response : "L a r e p o n s e",
+      response : " Vous pouvez nous contacter directement via notre formulaire de contact ou nous appeler. Nous serons ravis d'évaluer vos besoins et de vous proposer une solution adaptée.",
     }
   ]
   export { questions_responses, valeurs, servicesFoncier, servicesTopo, servicesGeo, projets, tools };

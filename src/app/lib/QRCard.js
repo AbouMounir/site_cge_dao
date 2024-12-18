@@ -15,8 +15,8 @@ export default function QRCard({question,response}) {
     
     return (
         <div className="border-gray-400 border-b py-5">
-            <div className="flex items-center gap-x-2">
-                <p className="">{question}</p>
+            <div className="flex items-center md:justify-center gap-x-2">
+                <h1 className="md:text-2xl">{question}</h1>
                 { !showResponse ? <div className="h-4 w-4"> <PlusIcon onClick={toggleResponse} className="h-4 w-4" /> </div> : <div className="h-4 w-4"> <MinusIcon onClick={toggleResponse} className="h-4 w-4" /> </div>}
             </div>
             <div className={`${text_styles.body_text}`}>
