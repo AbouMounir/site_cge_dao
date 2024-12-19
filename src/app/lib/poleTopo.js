@@ -28,7 +28,7 @@ export default function PoleTopo() {
                 </div>
                 <Image
                     src="/services_img.jpg"
-                    alt="Illustration image"
+                    alt="Les services de notre pole Topographie"
                     width={600}
                     height={900}
                     className="md:order:3 object-cover rounded-2xl w-1/3 h-[380px]"
