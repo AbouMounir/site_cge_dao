@@ -6,7 +6,7 @@ import { CheckCircleIcon } from "@heroicons/react/24/outline";
 
 export default function Card({id,iconUrl,icon, size, title, body, readMore, style, titleStyle,bodyStyle, titleDivStyle, imageStyle}) {
     return (
-        <div id={id} className={`${style} rounded-lg p-5 h-fit`}>
+        <div id={id} className={`${style} rounded-lg p-5`}>
          {iconUrl && <Image 
             src={iconUrl}
             width={size}

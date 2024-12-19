@@ -30,7 +30,7 @@ export default function Services() {
   {/*bg-slate-300/30*/}
   return (
     <div className='md:max-w-[100%] lg:max-w-[90%]'>
-          <div id='services' className='md:py-12 md:flex md:flex-col md:items-center'>
+          <div className='md:py-12 md:flex md:flex-col md:items-center'>
             <Card 
               title="Services"
               titleDivStyle='justify-center'
@@ -55,7 +55,7 @@ export default function Services() {
                 <div className='px-5'>
                   <Image
                       src="/services_img.jpg"
-                      alt="Illustration image"
+                      alt="Les services de nos differents poles : Foncier, Topographie, Géomatique"
                       width={600}
                       height={900}
                       className="md:order:3 object-cover rounded-2xl w-full h-[300px]"

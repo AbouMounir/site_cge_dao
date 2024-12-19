@@ -27,7 +27,7 @@ export default function PoleFoncier() {
                 </div>
                 <Image
                     src="/services_img.jpg"
-                    alt="Illustration image"
+                    alt="Les services de notre pole Foncier"
                     width={600}
                     height={900}
                     className="md:order:3 object-cover rounded-2xl w-1/3 h-[300px]"

@@ -18,7 +18,6 @@ export default function FormLabelImput({multiline,label,type,placeholder,name,id
               placeholder={placeholder}
               value={inputValue}
               onChange={(e) => {
-                console.log(e.target);
                 setInputValue(e.target.value)
               }}
             /> :

@@ -31,7 +31,7 @@ export default function Projets() {
                     <div className="px-5 flex-shrink-0 w-full transition-transform duration-500 ease-in-out md:w-[45%]"  style={{ transform: `translateX(-${currentIndex * 100}%)` }} key={item.id}>
                         <Image
                             src={item.url}
-                            alt="Illustration image"
+                            alt="Notre projet de réamenagement et délimitation"
                             width={600}
                             height={900}
                             className="mb-5 rounded-xl object-cover w-full h-[300px]"

@@ -70,40 +70,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sponsor */}
+      {/* Partenaires */}
       <section className='w-full py-8 flex justify-center'>
         <div className='md:w-[100%] lg:max-w-[90%] flex lg:justify-center gap-4 overflow-scroll lg:overflow-hidden'>
           <Image 
             src='/svg/sponsor1.svg'
-            alt='sponsor'
+            alt='La liste de nos partenaires'
             height={120}
             width={30}
             className='h-[40px] w-[180px] lg:px-4 px-8 border-r-2'
           />
           <Image 
             src='/svg/sponsor2.svg'
-            alt='sponsor'
+            alt='La liste de nos partenaires'
             height={120}
             width={30}
             className='h-[40px] w-[180px] lg:px-4 px-8 border-r-2'
           />
           <Image 
             src='/svg/sponsor3.svg'
-            alt='sponsor'
+            alt='La liste de nos partenaires'
             height={120}
             width={30}
             className='h-[40px] w-[180px] lg:px-4 px-8 border-r-2'
           />
           <Image 
             src='/svg/sponsor4.svg'
-            alt='sponsor'
+            alt='La liste de nos partenaires'
             height={120}
             width={30}
             className='h-[40px] w-[180px] lg:px-4 px-8 border-r-2'
           />
           <Image 
             src='/svg/sponsor1.svg'
-            alt='sponsor'
+            alt='La liste de nos partenaires'
             height={120}
             width={30}
             className='h-[40px] w-[180px] lg:px-4 px-8'
@@ -129,7 +129,7 @@ export default function Home() {
           <div className='md:w-[45%] md:mr-10 md:order-1 mt-5'>
               <Image
                 src="/survey_grid_image_1.jpg"
-                alt="Surveyor working on site"
+                alt="Les images de certains de nos travaux : géomètre"
                 width={350}
                 height={400}
                 className="rounded-lg object-cover w-full h-[250px] mb-6 md:h-[60%] md:w-[100%] md:mb-0"
@@ -137,21 +137,21 @@ export default function Home() {
             <div className='flex justify-between md:w-[100%] md:mt-4'>
               <Image
                 src="/survey_grid_image_1.jpg"
-                alt="Surveyor working on site"
+                alt="Les images de certains de nos travaux : station totale"
                 width={350}
                 height={400}
                 className="rounded-lg object-cover w-[47%] h-[150px] mr-6 md:h-[150px]"
               />
               <Image
                 src="/survey_grid_image_1.jpg"
-                alt="Surveyor working on site"
+                alt="Les images de certains de nos travaux : diagonale/délimitation"
                 width={350}
                 height={400}
                 className="rounded-lg object-cover w-[47%] h-[150px] md:h-[150px]"
               />
               <Image
                 src="/survey_grid_image_1.jpg"
-                alt="Surveyor working on site"
+                alt="Les images de certains de nos travaux : releves de details"
                 width={350}
                 height={400}
                 className="rounded-lg object-cover w-full h-[300px] md:h-[150px] md:w-auto md:mr-2 hidden"
@@ -175,7 +175,7 @@ export default function Home() {
           </div>
           <Image
               src="/illustration.png"
-              alt="Illustration image"
+              alt="Notre sublime cabinet de géomètre expert"
               width={600}
               height={900}
               className="rounded-2xl object-cover w-full h-[450px]"
@@ -207,7 +207,7 @@ export default function Home() {
       </section>
 
       {/* Vision, Mission, Valeurs */}
-      <section className='w-full px-5 py-16 md:flex md:items-center md:justify-center'>
+      <section id='valeurs' className='w-full px-5 py-16 md:flex md:items-center md:justify-center'>
         <div className='md:max-w-{100%} lg:max-w-[90%]'>
           <div className='md:flex md:flex-col md:items-center'>
             <Card 
@@ -246,12 +246,12 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section className='w-full px-5 py-16 md:flex md:items-center md:justify-center md:bg-[#F3F9FD]'>
+      <section id='services' className='w-full px-5 py-16 md:flex md:items-center md:justify-center md:bg-[#F3F9FD]'>
         <Services />
       </section>
 
       {/* Projets */}
-      <section className='w-full px-5 py-16 md:flex md:items-center md:justify-center'>
+      <section id='projets' className='w-full px-5 py-16 md:flex md:items-center md:justify-center'>
         <div className='md:max-w-[100%] lg:max-w-[90%] md:flex md:flex-col md:items-center md:justify-center'>
           <Card id='projets'
             style='md:text-center md:px-[15%]' 
@@ -295,7 +295,7 @@ export default function Home() {
       </section>
 
       { /* Technologies et Outils*/}
-      <section className={`${styles.bg_tools} w-full px-5 py-16 md:flex md:items-center md:justify-center`}>
+      <section id='technologies' className={`${styles.bg_tools} w-full px-5 py-16 md:pb-10 md:flex md:items-center md:justify-center`}>
         <div className='md:max-w-[100%] lg:max-w-[90%] md:flex md:flex-col md:flex-wrap md:h-[650px]'>
             <div className='md:w-[45%]'>
               <Card 
@@ -306,7 +306,7 @@ export default function Home() {
               <div className='px-5'>
                 <Image
                 src="/tools_img.jpg"
-                alt="Surveyor working on site"
+                alt="Nos appareils topographiques"
                 width={300}
                 height={300}
                 className="hidden rounded-2xl object-cover w-full md:block h-[300px]"
@@ -327,17 +327,17 @@ export default function Home() {
             <div className='px-5'>
               <Image
                 src="/tools_img.jpg"
-                alt="Surveyor working on site"
+                alt="Nos appareils topographiques"
                 width={300}
                 height={300}
-                className="rounded-2xl object-cover w-full md:hidden md:w-[45%] h-[300px]"
+                className="rounded-2xl object-cover w-full md:hidden md:w-[45%] h-auto"
               />
             </div>
         </div>
       </section>
 
       {/* Actualités*/}
-      <section className='w-full md:min-h-max px-5 py-12 md:flex md:items-center md:justify-center'>
+      <section id='actualites' className='w-full px-5 py-12 md:flex md:items-center md:justify-center'>
           <div className='md:max-w-[100%] lg:max-w-[90%]'>
             <Card 
               title="Actualités" 
@@ -346,35 +346,35 @@ export default function Home() {
               titleStyle='mb-3 !text-2xl md:!text-3xl lg:!text-5xl'
               body="Retrouvez des articles techniques, des études de cas, et des informations sur la loi foncière du pays, les procédures légales et les techniques liées au métier de géomètre topographe."/>
           
-            <div className='px-5 md:flex md:min-h-max md:gap-x-2'>
+            <div className='px-5 min-h-fit md:flex md:gap-x-2'>
               <Card 
-                iconUrl="/actuality_img.png"
+                iconUrl="/pamofor.jpg"
                 style="border-2 rounded-xl"
-                imageStyle="h-1/2 w-full mb-4 rounded-lg"
+                imageStyle="h-auto w-full mb-4 rounded-lg"
                 titleStyle="pb-2 md:!text-xl lg:!text-2xl"
                 size={175}
-                title="Activities Improve Mind"
-                body="This comprehensive suite of payment products offers a fully integrated solution for handling various payment needs."
+                title="Des résultats du PAMOFOR présentés à la Banque mondiale"
+                body="Programme de Renforcement de la Sécurisation Foncière Rurale (PRESFOR) : 500 000 certificats fonciers à délivrer gratuitement dans 16 régions"
                 readMore={true}
               />
               <Card 
-                iconUrl="/actuality_img.png"
+                iconUrl="/presfor1.jpg"
                 style="border-2 rounded-xl mt-3 md:mt-0"
-                imageStyle="h-1/2 w-full mb-4 rounded-lg"
+                imageStyle="h-auto w-full mb-4 rounded-lg"
                 size={175}
-                title="Activities Improve Mind"
-                titleStyle='pb-2 md:!text-xl'
-                body="This comprehensive suite of payment products offers a fully integrated solution for handling various payment needs."
+                title="Lancement du PRESFOR"
+                titleStyle='pb-2 md:!text-xl lg:!text-2xl'
+                body="Programme de Renforcement de la Sécurisation Foncière Rurale (PRESFOR) : 500 000 certificats fonciers à délivrer gratuitement dans 16 régions"
                 readMore={true}
               />
               <Card 
-                iconUrl="/actuality_img.png"
+                iconUrl="/presi_ordre_ge.jpg"
                 style="border-2 rounded-xl mt-3 md:mt-0"
-                imageStyle="h-1/2 w-full mb-4 rounded-lg"
+                imageStyle="h-auto w-full mb-4 rounded-lg"
                 size={175}
-                title="Activities Improve Mind"
-                titleStyle='pb-2 md:!text-xl'
-                body="This comprehensive suite of payment products offers a fully integrated solution for handling various payment needs."
+                title="Journée mondiale du géomètre-expert du 21 mars 2024"
+                titleStyle='pb-2 md:!text-xl lg:!text-2xl'
+                body="Côte d'Ivoire/Journée mondiale du géomètre : plaidoyer pour une planification durable des territoires avec les géomètres"
                 readMore={true}
               />
             </div>
@@ -403,7 +403,7 @@ export default function Home() {
           </div>
           <Image
               src="/equipe_img.png"
-              alt="Surveyor working on site"
+              alt="Une equipe dynamique pour la réalisation de vos projets"
               width={150}
               height={150}
               className="object-cover w-full px-5 mt-5 rounded-xl md:order-1 md:w-1/3 md:px-0 md:mt-0"

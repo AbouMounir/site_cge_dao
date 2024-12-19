@@ -10,16 +10,6 @@ import { useState } from "react";
 export default function Contact() {
 
     const [status, setStatus] = useState('');
-    const [inputValues, setInputValues] = useState(
-        {
-            prenom:'',
-            nom:'',
-            email:'',
-            tel:'',
-            objet:'',
-            message:''
-        }
-    )
     const formData = {}
     
     async function handleSubmit(e){
@@ -28,11 +18,12 @@ export default function Contact() {
         for (let element of formElements) {
             let name = element.name
             let value = element.value
-            console.log(`name : ${name} && value : ${value}`);
             formData[name] = value
         }
+        console.log(formData);
+        
         try {
-            const res = await fetch('/api/send-email', {
+            const res = await fetch('/api/contact', {
                 method : 'POST',
                 headers : {
                     'Content-Type': 'application/json',
@@ -40,21 +31,26 @@ export default function Contact() {
                 body : JSON.stringify(formData)
             })
 
-            if (res.ok) {
+            const result = await res.json();
+            console.log(result.status);
+            
+            
+            if (result.status == 200) {
                 setStatus('Message envoyé avec succès !');
-                formData = {}
+                console.log(status);
+                
                 for (let element of formElements) {
                     element.value = ''
                 }
-                console.log(status);
+                
                 
             } else {
                 setStatus('Erreur lors de l\'envoi du message.');
-                console.log(status);
+                console.log(`else : ${status}`);
             }
         } catch (error) {
             setStatus('Erreur lors de l\'envoi du message.');
-            console.log(status);
+            console.log(`catch : ${status}`);
         }           
     }
     return (
